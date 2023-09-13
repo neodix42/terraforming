@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  tasks:
+    - include_tasks: superuser.yml
+      vars:
+        - username: swisscops
+        - ssh_key: "{{ lookup('file', '../etc/keys/swisscops.pub') }}"
+
+    - include_tasks: superuser.yml
+      vars:
+        - username: rulon
+        - ssh_key: "{{ lookup('file', '../etc/keys/rulon.pub') }}"
+      
+    - include_tasks: superuser.yml
+      vars:
+        - username: spycheese
+        - ssh_key: "{{ lookup('file', '../etc/keys/spycheese.pub') }}"
+      
+    - include_tasks: superuser.yml
+      vars:
+        - username: neodix
+        - ssh_key: "{{ lookup('file', '../etc/keys/neodix.pub') }}"

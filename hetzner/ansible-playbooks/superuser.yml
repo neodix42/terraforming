@@ -1,0 +1,22 @@
+---
+- name: Add the user {{ username }}
+  ansible.builtin.user:
+    name: "{{ username }}"
+    shell: /bin/bash
+    groups: sudo
+    password: '*'
+    append: yes
+
+- name: Allow {{ username }} to run any commands with sudo
+  community.general.sudoers:
+    name: "{{ username + '-doall' }}"
+    state: present
+    user: "{{ username }}"
+    commands: ALL
+    nopassword: true
+
+- name: Add ssh key for user {{ username }}
+  ansible.posix.authorized_key:
+    user: "{{ username }}"
+    state: present
+    key: "{{ ssh_key }}"

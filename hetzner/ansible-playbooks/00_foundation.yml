@@ -1,0 +1,39 @@
+---
+
+- hosts: all
+  tasks:
+    - name: Set timezone to UTC
+      community.general.timezone:
+        name: UTC
+
+    - name: Disable dynamic MOTD
+      pamd:
+        name: sshd
+        type: session
+        control: optional
+        module_path: pam_motd.so
+        state: absent
+
+    - name: Copy bashrc to root
+      ansible.builtin.copy:
+        src: ../etc/skel/.bashrc
+        dest: /root/.bashrc
+        owner: root
+        group: root
+        mode: '0640'
+
+    - name: Copy inputrc to root
+      ansible.builtin.copy:
+        src: ../etc/skel/.inputrc
+        dest: /root/.inputrc
+        owner: root
+        group: root
+        mode: '0640'
+
+    - name: Copy skel
+      ansible.builtin.copy:
+        src: ../etc/skel/
+        dest: /etc/skel
+        owner: root
+        group: root
+        mode: '0640'

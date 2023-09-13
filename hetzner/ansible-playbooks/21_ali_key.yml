@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: Add ali key to root
+      ansible.posix.authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '../etc/keys/ton-ali.pub') }}"

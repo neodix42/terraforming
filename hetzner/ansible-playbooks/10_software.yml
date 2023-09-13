@@ -1,0 +1,55 @@
+---
+
+- hosts: all
+  tasks:
+    - name: Update all packages to their latest version
+      ansible.builtin.apt:
+        name: "*"
+        state: latest
+
+    - name: Upgrade the OS (apt-get dist-upgrade)
+      ansible.builtin.apt:
+        upgrade: dist
+
+    - name: Run apt-get update
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install foundation packages
+      ansible.builtin.apt:
+        pkg:
+          - zfsutils-linux
+          - vim
+          - ufw
+          - htop
+          - pv
+          - plzip
+          - man
+          - apg
+          - apt-transport-https
+          - software-properties-common
+          - wget
+          - lsof
+          - chrony
+          - manpages
+          - file
+          - whois
+          - tcpdump
+          - git
+          - jq
+          - vnstat
+          - net-tools
+          - dnsutils
+          - nvme-cli
+          - smartmontools
+          - iperf3
+          - sysbench
+          - fio
+          - cronolog
+          - sysbench
+
+    - name: Fetch yq
+      ansible.builtin.get_url:
+        url: https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+        dest: /usr/local/bin/yq
+        mode: '0755'

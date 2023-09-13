@@ -1,0 +1,18 @@
+---
+- name: Include foundation
+  ansible.builtin.import_playbook: 00_foundation.yml
+
+- name: Include software
+  ansible.builtin.import_playbook: 10_software.yml
+
+- name: Include development
+  ansible.builtin.import_playbook: 11_development.yml
+
+- name: Include users
+  ansible.builtin.import_playbook: 20_users.yml
+
+- name: Include ali key
+  ansible.builtin.import_playbook: 21_ali_key.yml
+
+- name: Include hosts
+  ansible.builtin.import_playbook: 25_hosts.yml
