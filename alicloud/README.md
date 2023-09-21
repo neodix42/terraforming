@@ -9,9 +9,11 @@ terraform apply out.txt
 terraform destroy
 ```
 
-Generate ansible inventory
+Generate ansible inventory for 3 zones
 ```
 terraform plan
-terraform refresh or apply
-terraform output rendered
+terraform apply
+terraform output rendered_a
+terraform output rendered_b
+terraform output rendered_c
 ```
