@@ -3,10 +3,10 @@ variable "host_password" {
 }
 
 variable "access_key" {
-  default = "LTAI5tFNugDRzasDK1gREbxu"
+  default = ""
 }
 variable "secret_key" {
-  default = "WTG8K4bS2s4aupQLo13dgYITPQ3jSU"
+  default = ""
 }
 
 variable "region" {
