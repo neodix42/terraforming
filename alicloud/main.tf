@@ -59,9 +59,10 @@ resource "alicloud_security_group_rule" "allow_all_udp" {
 resource "alicloud_instance" "zoneA" {
   count = var.instances_number_a
   vswitch_id = alicloud_vswitch.vswa.id
+  availability_zone = "ap-southeast-1a"
   security_groups = [alicloud_security_group.default.id]
   private_ip = var.private_ips_a[count.index]
-  instance_type = (count.index + 1) > 11 ? var.instance_ic5 : var.instance_c7
+  instance_type = (count.index + 1) > 127 ? var.instance_ic5 : var.instance_c7
   image_id = "ubuntu_22_04_x64_20G_alibase_20230613.vhd"
   system_disk_category = var.disk_category
   system_disk_size = 40
@@ -88,9 +89,10 @@ resource "alicloud_instance" "zoneA" {
 resource "alicloud_instance" "zoneB" {
   count = var.instances_number_b
   vswitch_id = alicloud_vswitch.vswb.id
+  availability_zone = "ap-southeast-1b"
   security_groups = [alicloud_security_group.default.id]
   private_ip = var.private_ips_b[count.index]
-  instance_type = (count.index + 1) > 179 ? var.instance_ic5 : var.instance_c7
+  instance_type = (count.index + 1) > 99 ? var.instance_c7 : var.instance_ic5
   image_id = "ubuntu_22_04_x64_20G_alibase_20230613.vhd"
   system_disk_category = var.disk_category
   system_disk_size = 40
@@ -117,9 +119,10 @@ resource "alicloud_instance" "zoneB" {
 resource "alicloud_instance" "zoneC" {
   count = var.instances_number_c
   vswitch_id = alicloud_vswitch.vswc.id
+  availability_zone = "ap-southeast-1c"
   security_groups = [alicloud_security_group.default.id]
   private_ip = var.private_ips_c[count.index]
-  instance_type = (count.index + 1) > 21 ? var.instance_ic5 : var.instance_c7
+  instance_type = (count.index + 1) > 19 ? var.instance_ic5 : var.instance_c7
   image_id = "ubuntu_22_04_x64_20G_alibase_20230613.vhd"
   system_disk_category = var.disk_category
   system_disk_size = 40

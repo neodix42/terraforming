@@ -29,22 +29,19 @@ variable "instance_c7" {
   default = "ecs.c7.16xlarge"
 }
 
-#total number of instances in zone A - 11 ic5 and 127 c7
+#total number of instances in zone A - 127 c7 and 11 ic5
 variable "instances_number_a" {
-  default = 138
-#  default = 12
+  default = 55 # 55
 }
 
 #total number of instances in zone B - 179 ic5 and 75 c7
 variable "instances_number_b" {
-  default = 254
-#  default = 6
+  default = 110 # 110
 }
 
-#total number of instances in zone C - 21 ic5 and 63 c7
+#total number of instances in zone C - 63 c7 and 21 ic5
 variable "instances_number_c" {
-  default = 84
-#  default = 24
+  default = 19 # 19
 }
 
 variable "data_disk_size" {
