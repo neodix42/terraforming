@@ -64,14 +64,6 @@ output "this_public_ip_c" {
   value       = alicloud_instance.zoneC.*.public_ip
 }
 
-output "rendered_a" {
-  value = local.ansible_inventory_a
-}
-
-output "rendered_b" {
-  value = local.ansible_inventory_b
-}
-
-output "rendered_c" {
-  value = local.ansible_inventory_c
+output "rendered" {
+  value = local.ansible_inventory
 }

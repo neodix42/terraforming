@@ -17,9 +17,9 @@ sudo apt -y purge unattended-upgrades
 sudo apt update
 sudo apt install -y libblas-dev libsecp256k1-dev libsodium-dev libgsl-dev liblz4-dev unzip
 
-if [[ $HOSTNAME == @(val-001|val-010|val-020|val-030|val-040) ]]; then
-  wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token MBd5-C2PBqeLJCcbSGLOVSlliPvguLNbk-1pWhagKMmyOqu0E6dM5bVJe43SJTshZvfuU-h8zSIbJtHXYPAOEafLpUCz7u7N5x6-V5d3ErZbnNdiq-4ucNV2SHX1jCInU-OmG7w --claim-rooms 9758d9b2-18d4-4a1d-bda0-4290a570981a --claim-url https://app.netdata.cloud
-fi
+#if [[ $HOSTNAME == @(val-001|val-010|val-020|val-030|val-040) ]]; then
+#  wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token MBd5-C2PBqeLJCcbSGLOVSlliPvguLNbk-1pWhagKMmyOqu0E6dM5bVJe43SJTshZvfuU-h8zSIbJtHXYPAOEafLpUCz7u7N5x6-V5d3ErZbnNdiq-4ucNV2SHX1jCInU-OmG7w --claim-rooms 9758d9b2-18d4-4a1d-bda0-4290a570981a --claim-url https://app.netdata.cloud
+#fi
 
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC190+w9FOyH4MsB94KzF2neNPV9t0ZeMXXjRpYfAnnf ton_deploy@swisscops' >> ~/.ssh/authorized_keys
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPRzdQPADLAaW0G+fwAPy8+RVJeHk4og3K29ufkdGYkW spycheese@ton-swarm' >> ~/.ssh/authorized_keys
