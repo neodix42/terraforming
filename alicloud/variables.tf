@@ -31,12 +31,12 @@ variable "instance_c7" {
 
 #total number of instances in zone A - 127 c7 and 11 ic5
 variable "instances_number_a" {
-  default = 55 # 55
+  default = 72 # 72
 }
 
 #total number of instances in zone B - 179 ic5 and 75 c7
 variable "instances_number_b" {
-  default = 110 # 110
+  default = 107 # 107
 }
 
 #total number of instances in zone C - 63 c7 and 21 ic5

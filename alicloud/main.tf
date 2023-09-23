@@ -62,7 +62,7 @@ resource "alicloud_instance" "zoneA" {
   availability_zone = "ap-southeast-1a"
   security_groups = [alicloud_security_group.default.id]
   private_ip = var.private_ips_a[count.index]
-  instance_type = (count.index + 1) > 127 ? var.instance_ic5 : var.instance_c7
+  instance_type = (count.index + 1) > 67 ? var.instance_ic5 : var.instance_c7
   image_id = "ubuntu_22_04_x64_20G_alibase_20230613.vhd"
   system_disk_category = var.disk_category
   system_disk_size = 40
