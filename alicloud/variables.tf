@@ -12,13 +12,13 @@ variable "region" {
   default = "eu-central-1"
 }
 variable "zoneid" {
-  default = "eu-central-1b"
+  default = "eu-central-1c"
 }
 variable "instance_type" {
-  default = "ecs.hfg6.2xlarge"
+  default = "esc.c6.6xlarge"
 }
 variable "instances_number" {
-  default = 2
+  default = 256
 }
 
 variable "data_disk_size" {
