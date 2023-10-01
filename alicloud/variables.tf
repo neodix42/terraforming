@@ -8,6 +8,7 @@ variable "access_key" {
 variable "secret_key" {
   default = ""
 }
+
 variable "region" {
   default = "eu-central-1"
 }
@@ -15,7 +16,7 @@ variable "zoneid" {
   default = "eu-central-1c"
 }
 variable "instance_type" {
-  default = "esc.c6.6xlarge"
+  default = "ecs.c6.6xlarge"
 }
 variable "instances_number" {
   default = 256
