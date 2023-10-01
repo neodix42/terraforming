@@ -9,39 +9,33 @@ variable "secret_key" {
   default = ""
 }
 
+
 variable "region" {
-  default = "ap-southeast-1"
+  default = "eu-central-1"
 }
 variable "zoneida" {
-  default = "ap-southeast-1a"
+  default = "eu-central-1a"
 }
 variable "zoneidb" {
-  default = "ap-southeast-1b"
+  default = "eu-central-1b"
 }
 variable "zoneidc" {
-  default = "ap-southeast-1c"
+  default = "eu-central-1c"
 }
-variable "instance_ic5" {
-  default = "ecs.ic5.16xlarge"
-}
-
-variable "instance_c7" {
-  default = "ecs.c7.16xlarge"
+variable "instance_c6" {
+  default = "ecs.c6.6xlarge"
 }
 
-#total number of instances in zone A - 127 c7 and 11 ic5
 variable "instances_number_a" {
-  default = 72 # 72
+  default = 0 # max tested - 0
 }
 
-#total number of instances in zone B - 179 ic5 and 75 c7
 variable "instances_number_b" {
-  default = 107 # 107
+  default = 0 # max tested - 0
 }
 
-#total number of instances in zone C - 63 c7 and 21 ic5
 variable "instances_number_c" {
-  default = 19 # 19
+  default = 120 # max tested - 120
 }
 
 variable "data_disk_size" {
