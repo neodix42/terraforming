@@ -27,15 +27,15 @@ variable "instance_c6" {
 }
 
 variable "instances_number_a" {
-  default = 0 # max tested - 0
+  default = 0 # max available tested - 120
 }
 
 variable "instances_number_b" {
-  default = 0 # max tested - 0
+  default = 116 # max available tested - 120
 }
 
 variable "instances_number_c" {
-  default = 120 # max tested - 120
+  default = 140 # max available tested - 142
 }
 
 variable "data_disk_size" {
