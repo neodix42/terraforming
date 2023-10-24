@@ -13,7 +13,7 @@ variable "region" {
   default = "eu-central-1"
 }
 variable "zoneid" {
-  default = "eu-central-1c"
+  default = "eu-central-1a"
 }
 variable "instance_type" {
   default = "ecs.c6.6xlarge"
