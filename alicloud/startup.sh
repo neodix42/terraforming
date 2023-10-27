@@ -21,11 +21,13 @@ if [[ $HOSTNAME == @(val-001|val-010|val-020|val-030|val-040) ]]; then
   wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token MBd5-C2PBqeLJCcbSGLOVSlliPvguLNbk-1pWhagKMmyOqu0E6dM5bVJe43SJTshZvfuU-h8zSIbJtHXYPAOEafLpUCz7u7N5x6-V5d3ErZbnNdiq-4ucNV2SHX1jCInU-OmG7w --claim-rooms 9758d9b2-18d4-4a1d-bda0-4290a570981a --claim-url https://app.netdata.cloud
 fi
 
+sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPN39zE8MzGO+7XMiwb78PxGuioorOmq1RyJgHeyds6G aakash.tewari@certik.com' >> ~/.ssh/authorized_keys
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC190+w9FOyH4MsB94KzF2neNPV9t0ZeMXXjRpYfAnnf ton_deploy@swisscops' >> ~/.ssh/authorized_keys
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPRzdQPADLAaW0G+fwAPy8+RVJeHk4og3K29ufkdGYkW spycheese@ton-swarm' >> ~/.ssh/authorized_keys
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINl6ajp0cFW6KLPNLwcLj5ti/5Sojt4Hu7Iv5lepMgCw root@ton-ali-002' >> ~/.ssh/authorized_keys
 sudo echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC3LyP2DEpk6DNbQST62txaFE9M3nz5QIjXcJSQnci8W main@MacBook' >> ~/.ssh/authorized_keys
 sudo echo 'from="172.16.0.0/21" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJTKmHfkORfGCNWo4cANYV/NKc5tpOjQBlO09e0wXm7u ubuntu@196S010950' >> ~/.ssh/authorized_keys
+
 
 sudo cat >> ~/.ssh/id_ed25519 <<EOF
 -----BEGIN OPENSSH PRIVATE KEY-----
